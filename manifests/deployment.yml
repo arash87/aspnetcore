@@ -1,16 +1,22 @@
-apiVersion : apps/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: helloaspnetcore 
+  name: hello-aspnetcore-deployment
 spec:
-  replicas: 1
+  selector:
+    matchLabels:
+      app: hello-aspnetcore-pod
   template:
     metadata:
       labels:
-        app: helloaspnetcore 
+        app: hello-aspnetcore-pod
     spec:
       containers:
-        - name: helloaspnetcore 
-          image: arash01.azurecr.io/helloaspnetcore
-          ports:
-          - containerPort: 80
+      - name: hello-aspnetcore-container
+        image: julio01.azurecr.io/hello-aspnetcore:v1
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
