@@ -12,7 +12,7 @@ variables:
   imageRepository: 'hello-aspnetcore'
   containerRegistry: 'arash01.azurecr.io'
   dockerfilePath: '**/Dockerfile'
-  tag: '$(Build.BuildNumber)'
+  tag: '$(Build.BuildId)'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
