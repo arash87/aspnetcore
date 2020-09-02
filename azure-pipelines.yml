@@ -10,7 +10,7 @@ variables:
 
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: 'dc0f285d-cdaa-41aa-ab28-333c7b733d05'
-  imageRepository: 'helloaspnetcore'
+  imageRepository: 'hello-aspnetcore'
   containerRegistry: 'arash01.azurecr.io'
   dockerfilePath: '**/Dockerfile'
   tag: '$(Build.BuildId)'
