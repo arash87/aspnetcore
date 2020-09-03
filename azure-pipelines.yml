@@ -5,10 +5,11 @@
 trigger:
 - master
 
+
 variables:
 
   # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: 'c14a61c9-5477-4d57-831b-0a638936d8c9'
+  dockerRegistryServiceConnection: 'dc0f285d-cdaa-41aa-ab28-333c7b733d05'
   imageRepository: 'hello-aspnetcore'
   containerRegistry: 'arash01.azurecr.io'
   dockerfilePath: '**/Dockerfile'
@@ -61,6 +62,7 @@ stages:
               manifests: |
                 $(Pipeline.Workspace)/manifests/deployment.yml
                 $(Pipeline.Workspace)/manifests/service.yml
+              imagePullSecrets: |
+                $(imagePullSecret)
               containers: |
                 $(containerRegistry)/$(imageRepository):$(tag)
-
