@@ -49,7 +49,7 @@ stages:
     displayName: Deploy
     pool:
       vmImage: $(vmImageName)
-    environment: 'aspnetcore-test.default'
+    environment: 'aspnetcore-test'
     strategy:
       runOnce:
         deploy:
