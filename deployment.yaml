@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: hello-aspnetcore-container
-        image: arash01.azurecr.io/aspnetcore:v1
+        image: arash01.azurecr.io/aspnetcore:#{$Build.BuildId}#
         resources:
           limits:
             memory: "128Mi"
