@@ -46,7 +46,7 @@ stages:
     displayName: Deploy
     pool:
       vmImage: $(vmImageName)
-    environment: 'development'
+    environment: 'hello-aspnetcore.development'
     strategy:
       runOnce:
         deploy:
