@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: aspnetcoretest 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: aspnetcoretest 
+    spec:
+      containers:
+        - name: aspnetcoretest 
+          image: arash01.azurecr.io/aspnetcoretest
+          ports:
+          - containerPort: 80
