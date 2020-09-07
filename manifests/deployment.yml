@@ -3,6 +3,9 @@ kind: Deployment
 metadata:
   name: aspnetcoretest 
 spec:
+  selector:
+    matchLabels:
+      app: aspnetcoretest
   replicas: 1
   template:
     metadata:
