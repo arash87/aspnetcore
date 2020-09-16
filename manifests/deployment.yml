@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: aspnetcoretest 
-          image: arash01.azurecr.io/aspnetcoretest
+          image: arash01.azurecr.io/aspnetcoretest:latest
           imagePullPolicy: Always
           ports:
           - containerPort: 80

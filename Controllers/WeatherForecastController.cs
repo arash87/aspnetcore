@@ -38,7 +38,7 @@ namespace HelloAspNetCore.Controllers
 
         [HttpGet("ping")]
         public string Ping(){
-            return "Its working";
+            return "Its working - updated";
         }
     }
 }
