@@ -35,5 +35,10 @@ namespace HelloAspNetCore.Controllers
             })
             .ToArray();
         }
+
+        [HttpGet("ping")]
+        public string Ping(){
+            return "Its working";
+        }
     }
 }
